@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troy Mathew Melander | Informatics & Architecture</title>
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --secondary-color: #334155;
+            --accent-color: #2563eb;
+            --bg-color: #f8fafc;
+            --text-color: #1e293b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-left: 30px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 10%;
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            font-weight: 400;
+            margin-bottom: 30px;
+            max-width: 800px;
+        }
+
+        .section {
+            padding: 100px 10%;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .tags {
+            margin-top: 15px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e0e7ff;
+            color: #3730a3;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .footer {
+            background: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            padding: 40px 10%;
+        }
+
+        .footer a {
+            color: #93c5fd;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero h2 { font-size: 1.2rem; }
+            nav { flex-direction: column; gap: 15px; }
+            nav div { display: flex; flex-wrap: wrap; justify-content: center; }
+            nav a { margin: 0 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div><strong>Troy M. Melander</strong></div>
+        <div>
+            <a href="#architecture">Data Architecture</a>
+            <a href="#ventures">Creative Ventures</a>
+            <a href="#pursuits">Life & Pursuits</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Troy Mathew Melander</h1>
+        <h2>Lead Technical Biomedical Informatics Programmer & Systems Architect</h2>
+        <p style="font-size: 1.1rem; max-width: 700px; color: var(--secondary-color);">
+            Bridging complex clinical needs with advanced data infrastructure. I specialize in enterprise-scale healthcare data architecture, engineering T-SQL pipelines, and driving institutional innovation within the Epic EHR ecosystem.
+        </p>
+    </section>
+
+    <section id="architecture" class="section">
+        <h2 class="section-title">Data Architecture & Clinical Informatics</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>RDSG Data Infrastructure</h3>
+                <p>Primary architect for an enterprise-scale, high-performance clinical research data mart built on Microsoft SQL Server. Utilizes a hub-and-spoke design with automated, tiered ETL pipelines to extract, centralize, and standardize raw Epic EMR data.</p>
+                <div class="tags">
+                    <span class="tag">T-SQL</span>
+                    <span class="tag">Data Marts</span>
+                    <span class="tag">ETL Pipelines</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Epic Cosmos Pioneer</h3>
+                <p>Spearheaded the successful launch and operational integration of the Epic Cosmos tool at UCSD Health. Selected as one of the inaugural Top 10 Epic Cosmos Superusers globally to act as a domain expert in large-scale clinical data analysis.</p>
+                <div class="tags">
+                    <span class="tag">Epic Cosmos Data Scientist</span>
+                    <span class="tag">Clinical Analytics</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>ENACT Shrine Project</h3>
+                <p>Directed the strategic expansion of a nationwide data infrastructure project, overseeing the architecture of massive de-identified databases to support federated clinical research networks.</p>
+                <div class="tags">
+                    <span class="tag">De-identified Data</span>
+                    <span class="tag">Federated Networks</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ventures" class="section" style="background-color: #fff;">
+        <h2 class="section-title">Entrepreneurial & Creative Ventures</h2>
+        <div class="grid">
+            <div class="card" style="border: 1px solid #e2e8f0; box-shadow: none;">
+                <h3>VibeDrop</h3>
+                <p>Founder and architect of a technical social discovery application. Driving the backend strategy and T-SQL database architecture to map user journeys and create seamless digital interactions.</p>
+            </div>
+            <div class="card" style="border: 1px solid #e2e8f0; box-shadow: none;">
+                <h3>The Social Battery Reset</h3>
+                <p>Creator and host of a self-development podcast bridging psychological frameworks and actionable mental optimization.</p>
+            </div>
+            <div class="card" style="border: 1px solid #e2e8f0; box-shadow: none;">
+                <h3>Upon Swiftest Wings</h3>
+                <p>Author of a large-scale, world-building high-fantasy novel exploring complex mythologies and character development.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pursuits" class="section">
+        <h2 class="section-title">Life & Pursuits</h2>
+        <p style="max-width: 800px; margin-bottom: 30px; font-size: 1.1rem;">
+            Optimization extends beyond the screen. My technical frameworks are balanced by a commitment to physical discipline, global immersion, and the study of human consciousness.
+        </p>
+        <div class="grid">
+            <div class="card">
+                <h3>Physical Discipline</h3>
+                <p>Maintaining a strict regimen of calisthenics, gym training, and high-frequency surfing across coastal breaks.</p>
+            </div>
+            <div class="card">
+                <h3>Global Immersion</h3>
+                <p>Extensive solo travel and backcountry experiences, from the Salkantay Trek in the Andes to exploring the diverse landscapes of Brazil, Argentina, and Southeast Asia.</p>
+            </div>
+            <div class="card">
+                <h3>Philosophical Integration</h3>
+                <p>A continuous student of Jungian concepts and the philosophies of Alan Watts and Michael Singer, integrating the mechanics of the mind into leadership and creative output.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>
+            <a href="https://www.linkedin.com/in/troymelander" target="_blank">LinkedIn</a> | 
+            <a href="#" target="_blank">GitHub</a>
+        </p>
+        <p style="margin-top: 20px; font-size: 0.9rem; color: #cbd5e1;">San Diego, CA &copy; 2026 Troy Mathew Melander</p>
+    </footer>
+
+</body>
+</html>
