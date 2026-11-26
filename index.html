@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Troy Mathew Melander | Informatics &amp; Architecture</title>
+
     <!-- SEO & Social Sharing (OpenGraph) -->
     <meta name="description" content="Lead Technical Biomedical Informatics Programmer & Systems Architect specializing in enterprise healthcare data architecture, Epic EHR/Cosmos, and applied agentic AI systems.">
     <meta property="og:title" content="Troy Mathew Melander | Informatics & Systems Architecture">
     <meta property="og:description" content="Enterprise healthcare data architecture, 80M+ row T-SQL pipelines, Epic Cosmos, and applied agentic AI systems.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://troymelander.github.io/">
-    <meta property="og:image" content="https://troymelander.github.io/images/Troy_Melander_Executive_Signal_Brief_Image.jpg"><meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="https://troymelander.github.io/images/Troy_Melander_Executive_Signal_Brief_Image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
 
     <!-- Inline SVG Favicon (TM) -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230f172a'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-family='sans-serif' font-weight='bold' font-size='44'>TM</text></svg>">
+
     <style>
         :root {
             --primary-color: #0f172a;
@@ -21,15 +24,17 @@
             --accent-color: #2563eb;
             --bg-color: #f8fafc;
             --text-color: #1e293b;
-        } html {
+        }
+
+        html {
             scroll-behavior: smooth;
         }
 
         * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
         body {
@@ -82,8 +87,50 @@
             font-size: 1.5rem;
             color: var(--secondary-color);
             font-weight: 400;
-            margin-bottom: 30px;
+            margin-bottom: 24px;
             max-width: 800px;
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            transform: translateY(-2px);
         }
 
         .section {
@@ -111,6 +158,8 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
         }
 
         .card:hover {
@@ -144,7 +193,8 @@
         }
 
         .tags {
-            margin-top: 15px;
+            margin-top: auto;
+            padding-top: 15px;
         }
 
         .tag {
@@ -205,6 +255,7 @@
     <nav>
         <div><strong>Troy M. Melander</strong></div>
         <div>
+            <a href="#executive-brief">Executive Brief</a>
             <a href="#architecture">Data Architecture</a>
             <a href="#ventures">AI &amp; Ventures</a>
             <a href="#pursuits">Life &amp; Pursuits</a>
@@ -217,6 +268,10 @@
         <p style="font-size: 1.1rem; max-width: 720px; color: var(--secondary-color);">
             Bridging complex clinical needs with enterprise data infrastructure and applied AI. I specialize in healthcare data architecture, high-throughput T-SQL pipelines, the Epic EHR ecosystem, and production agentic AI systems built with Python and LangGraph.
         </p>
+        <div class="hero-cta">
+            <a href="#executive-brief" class="btn-primary">View Executive Brief &rarr;</a>
+            <a href="#ventures" class="btn-secondary">Explore Applied AI</a>
+        </div>
     </section>
 
     <section id="executive-brief" class="section" style="background-color: #fff; text-align: center;">
@@ -290,7 +345,6 @@
 
                 <div class="card-links">
                     <a href="https://sbr-guide.streamlit.app/" target="_blank" class="card-link">Launch SBR Guide &rarr;</a>
-                    <a href="https://open.spotify.com/show/your-podcast-link" target="_blank" class="card-link">Listen to the Episodes &rarr;</a>
                 </div>
 
                 <div class="tags">
@@ -326,6 +380,12 @@
                         View Backend Architecture &rarr;
                     </a>
                 </div>
+
+                <div class="tags">
+                    <span class="tag">T-SQL</span>
+                    <span class="tag">Backend Architecture</span>
+                    <span class="tag">Product Design</span>
+                </div>
             </div>
 
             <div class="card" style="border: 1px solid #e2e8f0; box-shadow: none;">
@@ -336,6 +396,11 @@
                     <a href="https://upon-swiftest-wings.netlify.app/" target="_blank" class="card-link">
                         Explore the World &rarr;
                     </a>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">Worldbuilding</span>
+                    <span class="tag">Epic Fantasy</span>
                 </div>
             </div>
         </div>
