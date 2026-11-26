@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Troy Mathew Melander | Informatics & Architecture</title>
+    <title>Troy Mathew Melander | Informatics &amp; Architecture</title>
     <style>
         :root {
             --primary-color: #0f172a;
@@ -12,7 +12,7 @@
             --bg-color: #f8fafc;
             --text-color: #1e293b;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
@@ -111,6 +111,26 @@
             color: var(--primary-color);
         }
 
+        .card-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        .card-link {
+            display: inline-block;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .card-link:hover {
+            text-decoration: underline;
+        }
+
         .tags {
             margin-top: 15px;
         }
@@ -127,6 +147,21 @@
             font-weight: 500;
         }
 
+        .credentials-strip {
+            margin-top: 40px;
+            padding: 20px 25px;
+            background: #fff;
+            border-left: 4px solid var(--accent-color);
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            font-size: 0.95rem;
+            color: var(--secondary-color);
+        }
+
+        .credentials-strip strong {
+            color: var(--primary-color);
+        }
+
         .footer {
             background: var(--primary-color);
             color: #fff;
@@ -138,6 +173,10 @@
             color: #93c5fd;
             text-decoration: none;
             margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
@@ -155,102 +194,143 @@
         <div><strong>Troy M. Melander</strong></div>
         <div>
             <a href="#architecture">Data Architecture</a>
-            <a href="#ventures">Creative Ventures</a>
-            <a href="#pursuits">Life & Pursuits</a>
+            <a href="#ventures">AI &amp; Ventures</a>
+            <a href="#pursuits">Life &amp; Pursuits</a>
         </div>
     </nav>
 
     <section class="hero">
         <h1>Troy Mathew Melander</h1>
-        <h2>Lead Technical Biomedical Informatics Programmer & Systems Architect</h2>
-        <p style="font-size: 1.1rem; max-width: 700px; color: var(--secondary-color);">
-            Bridging complex clinical needs with advanced data infrastructure. I specialize in enterprise-scale healthcare data architecture, engineering T-SQL pipelines, and driving institutional innovation within the Epic EHR ecosystem.
+        <h2>Lead Technical Biomedical Informatics Programmer &amp; Systems Architect</h2>
+        <p style="font-size: 1.1rem; max-width: 720px; color: var(--secondary-color);">
+            Bridging complex clinical needs with enterprise data infrastructure and applied AI. I specialize in healthcare data architecture, high-throughput T-SQL pipelines, the Epic EHR ecosystem, and production agentic AI systems built with Python and LangGraph.
         </p>
     </section>
-<section id="executive-brief" class="section" style="background-color: #fff; text-align: center;">
+
+    <section id="executive-brief" class="section" style="background-color: #fff; text-align: center;">
         <h2 class="section-title">EXECUTIVE SIGNAL BRIEF</h2>
         <p style="max-width: 800px; margin: 0 auto 40px auto; font-size: 1.1rem; color: var(--secondary-color);">
             A high-level synthesis of my 10+ year trajectory in biomedical informatics and data science. This document outlines my institutional focus on enterprise-scale data infrastructure, Epic Cosmos integration, and federated clinical research analytics.
         </p>
-        
+
         <div class="card" style="display: block; max-width: 900px; margin: 0 auto; padding: 20px; border: 1px solid #e2e8f0; box-shadow: none;">
             <img src="https://troymelander.github.io/images/Troy_Melander_Executive_Signal_Brief_Image.png" alt="Troy M. Melander Executive Career Brief" style="width: 100%; height: auto; display: block; border-radius: 4px;">
-            
-            <a href="https://troymelander.github.io/images/Troy_Melander_Executive_Signal_Brief_Image.png" target="_blank" style="display: inline-block; margin-top: 15px; color: var(--accent-color); text-decoration: none; font-weight: 600; font-size: 0.95rem;">
+
+            <a href="https://troymelander.github.io/images/Troy_Melander_Executive_Signal_Brief_Image.png" target="_blank" class="card-link" style="margin-top: 15px;">
                 View Deployed Brief &rarr;
-                [The brief visualized above in image_8.png is a representation of the finalized deployed state]
             </a>
         </div>
     </section>
+
     <section id="architecture" class="section">
-        <h2 class="section-title">Data Architecture & Clinical Informatics</h2>
+        <h2 class="section-title">Data Architecture &amp; Clinical Informatics</h2>
         <div class="grid">
-           <div class="card">
+            <div class="card">
                 <h3>RDSG Data Infrastructure</h3>
-                <p>Primary architect for an enterprise-scale, high-performance clinical research data mart built on Microsoft SQL Server. Utilizes a hub-and-spoke design with automated, tiered ETL pipelines to extract, centralize, and standardize raw Epic EMR data.</p>
-                
-                <a href="https://github.com/TroyMelander/enterprise-clinical-data-mart" target="_blank" style="display: inline-block; margin-top: 15px; margin-bottom: 5px; color: var(--accent-color); text-decoration: none; font-weight: 600; font-size: 0.95rem;">
-                    View Architecture Repository &rarr;
-                </a>
-                
+                <p>Primary architect for an enterprise clinical research data mart on Microsoft SQL Server. Engineered an incremental Upsert ETL pipeline across 80M+ Epic Clarity encounter rows—cutting analyst query times by 95%—and deployed Phase 2 semantic and de-identified patient registry views.</p>
+
+                <div class="card-links">
+                    <a href="https://github.com/TroyMelander/enterprise-clinical-data-mart" target="_blank" class="card-link">
+                        View Architecture Repository &rarr;
+                    </a>
+                </div>
+
                 <div class="tags">
                     <span class="tag">T-SQL</span>
                     <span class="tag">Data Marts</span>
                     <span class="tag">ETL Pipelines</span>
+                    <span class="tag">Semantic Layer</span>
                 </div>
             </div>
+
             <div class="card">
                 <h3>Epic Cosmos Pioneer</h3>
-                <p>Spearheaded the successful launch and operational integration of the Epic Cosmos tool at UCSD Health. Selected as one of the inaugural Top 10 Epic Cosmos Superusers globally to act as a domain expert in large-scale clinical data analysis.</p>
+                <p>Spearheaded the operational launch and research integration of Epic Cosmos at UCSD Health. Selected as one of the initial 10 Epic Cosmos Superusers at UCSD Health to serve as a domain expert in large-scale clinical data analysis and cohort discovery.</p>
                 <div class="tags">
                     <span class="tag">Epic Cosmos Data Scientist</span>
                     <span class="tag">Clinical Analytics</span>
+                    <span class="tag">SlicerDicer</span>
                 </div>
             </div>
+
             <div class="card">
-                <h3>ENACT Shrine Project</h3>
-                <p>Directed the strategic expansion of a nationwide data infrastructure project, overseeing the architecture of massive de-identified databases to support federated clinical research networks.</p>
+                <h3>ENACT SHRINE &amp; Clinical Evidence</h3>
+                <p>Solo technical owner for UCSD's federated research network infrastructure and the ENACT Concierge Clinical Evidence Service (CCES). Co-authored a manuscript on clinician real-world data access submitted to the <em>Journal of Clinical and Translational Science</em> (2026).</p>
                 <div class="tags">
                     <span class="tag">De-identified Data</span>
                     <span class="tag">Federated Networks</span>
+                    <span class="tag">Real-World Data</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="credentials-strip">
+            <strong>Credentials:</strong> 7 Epic EHR Certifications (Clarity, Caboodle, Cogito, Clinical, Revenue Cycle, Clinical Research, Cosmos Data Scientist) &bull; Lean Six Sigma Green Belt &bull; Incoming MSc in Information Management (NOVA IMS, 2027)
+        </div>
+    </section>
+
+    <section id="ventures" class="section" style="background-color: #fff;">
+        <h2 class="section-title">Applied AI &amp; Creative Ventures</h2>
+        <div class="grid">
+            <div class="card" style="border: 1px solid #e2e8f0; box-shadow: none;">
+                <h3>The Social Battery Reset &amp; SBR Guide AI</h3>
+                <p>Creator of a psychology and philosophy podcast paired with a live agentic AI companion. Built the <strong>SBR Guide</strong> as a deterministic LangGraph state-machine on Streamlit and Gemini—guiding users through cognitive distancing, 4-4-6 somatic resets, and automated checklist delivery.</p>
+
+                <div class="card-links">
+                    <a href="YOUR_STREAMLIT_APP_URL" target="_blank" class="card-link">Launch SBR Guide &rarr;</a>
+                    <a href="https://open.spotify.com/show/your-podcast-link" target="_blank" class="card-link">Listen to the Episodes &rarr;</a>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">LangGraph</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Streamlit</span>
+                    <span class="tag">Gemini API</span>
+                </div>
+            </div>
+
+            <div class="card" style="border: 1px solid #e2e8f0; box-shadow: none;">
+                <h3>Surf Call</h3>
+                <p>Automated daily surf-forecasting engine that synthesizes Open-Meteo swell data, NOAA tides, and Surfline conditions via GitHub Actions and Gemini to deliver board-specific morning break recommendations via web and email.</p>
+
+                <div class="card-links">
+                    <a href="YOUR_SURF_CALL_URL" target="_blank" class="card-link">View Project &rarr;</a>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">GitHub Actions</span>
+                    <span class="tag">Streamlit</span>
+                    <span class="tag">LLM Automation</span>
+                </div>
+            </div>
+
+            <div class="card" style="border: 1px solid #e2e8f0; box-shadow: none;">
+                <h3>VibeDrop</h3>
+                <p>Founder and architect of a technical social discovery application. Driving the backend strategy and T-SQL database architecture to map user journeys and create seamless digital interactions.</p>
+
+                <div class="card-links">
+                    <a href="https://github.com/TroyMelander/scalable-social-backend-architecture" target="_blank" class="card-link">
+                        View Backend Architecture &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <div class="card" style="border: 1px solid #e2e8f0; box-shadow: none;">
+                <h3>Upon Swiftest Wings</h3>
+                <p>Author of a 115,000-word epic fantasy novel rooted in Finnish Sielulintu soul-bird folklore, exploring free will inside a rigid caste society. Currently preparing for literary agent outreach.</p>
+
+                <div class="card-links">
+                    <a href="https://upon-swiftest-wings.netlify.app/" target="_blank" class="card-link">
+                        Explore the World &rarr;
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="ventures" class="section" style="background-color: #fff;">
-        <h2 class="section-title">Entrepreneurial & Creative Ventures</h2>
-        <div class="grid">
-          <div class="card" style="border: 1px solid #e2e8f0; box-shadow: none;">
-                <h3>VibeDrop</h3>
-                <p>Founder and architect of a technical social discovery application. Driving the backend strategy and T-SQL database architecture to map user journeys and create seamless digital interactions.</p>
-                
-                <!-- Added External Link to the Abstracted Repo -->
-                <a href="https://github.com/TroyMelander/scalable-social-backend-architecture" target="_blank" style="display: inline-block; margin-top: 15px; margin-bottom: 5px; color: var(--accent-color); text-decoration: none; font-weight: 600; font-size: 0.95rem;">
-                    View Backend Architecture &rarr;
-                </a>
-            </div>
-            <div class="card" style="border: 1px solid #e2e8f0; box-shadow: none;">
-                <h3>The Social Battery Reset</h3>
-                <p>Creator and host of a self-development podcast exploring the mechanics of the mind. Bridging deep psychological frameworks with actionable mental optimization to help listeners navigate social friction and untether their potential.</p>
-                
-                <!-- Added External Link to Podcast -->
-                <a href="https://open.spotify.com/show/your-podcast-link" target="_blank" style="display: inline-block; margin-top: 15px; margin-bottom: 5px; color: var(--accent-color); text-decoration: none; font-weight: 600; font-size: 0.95rem;">
-                    Listen to the Episodes &rarr;
-                </a>
-            </div>
-           <div class="card" style="border: 1px solid #e2e8f0; box-shadow: none;">
-                <h3>Upon Swiftest Wings</h3>
-                <p>Author of a large-scale, world-building high-fantasy novel exploring complex narratives, the Sielulintu soul-bird mythology, and intricate character development.</p>
-                
-                <a href="https://upon-swiftest-wings.netlify.app/" target="_blank" style="display: inline-block; margin-top: 15px; margin-bottom: 5px; color: var(--accent-color); text-decoration: none; font-weight: 600; font-size: 0.95rem;">
-                    Explore the World &rarr;
-                </a>
-            </div>
-    </section>
-
     <section id="pursuits" class="section">
-        <h2 class="section-title">Life & Pursuits</h2>
+        <h2 class="section-title">Life &amp; Pursuits</h2>
         <p style="max-width: 800px; margin-bottom: 30px; font-size: 1.1rem;">
             Optimization extends beyond the screen. My technical frameworks are balanced by a commitment to physical discipline, global immersion, and the study of human consciousness.
         </p>
@@ -272,9 +352,12 @@
 
     <footer class="footer">
         <p>
-            <a href="https://www.linkedin.com/in/troymelander" target="_blank">LinkedIn</a> | 
-            <a href="https://github.com/TroyMelander" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/troymelander" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/TroyMelander" target="_blank">GitHub</a> |
+            <a href="mailto:troymmelander@gmail.com">Email</a>
         </p>
         <p style="margin-top: 20px; font-size: 0.9rem; color: #cbd5e1;">San Diego, CA &copy; 2026 Troy Mathew Melander</p>
     </footer>
+
+</body>
 </html>
